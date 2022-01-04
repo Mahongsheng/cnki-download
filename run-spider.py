@@ -1,6 +1,6 @@
 """
 -------------------------------------------------
-   File Name：     main.py
+   File Name：     run-spider.py
    Description :   爬虫主程序
    Author :        Cyrus_Ren
    date：          2018/12/8
@@ -22,10 +22,8 @@ import requests
 # 引入beautifulsoup
 from bs4 import BeautifulSoup
 
-from CrackVerifyCode import crack
-from GetConfig import config
-from GetPageDetail import page_detail
-from userinput import get_uesr_inpt
+from config import *
+from spider import *
 
 HEADER = config.crawl_headers
 # 获取cookie

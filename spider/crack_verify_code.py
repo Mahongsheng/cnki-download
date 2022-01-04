@@ -1,6 +1,6 @@
 """
 -------------------------------------------------
-   File Name：     CrackVerifyCode.py
+   File Name：     crack_verify_code.py
    Description :   处理验证码
    Author :        Cyrus_Ren
    date：          2018/12/8
@@ -11,12 +11,13 @@
 """
 __author__ = 'Cyrus_Ren'
 
-from PIL import Image
 # import tesserocr
 import re
-from GetConfig import config
-from urllib.parse import quote_plus, urlencode
-from GetConfig import config
+from urllib.parse import quote_plus
+
+from PIL import Image
+
+from config import *
 
 HEADER = config.crawl_headers
 

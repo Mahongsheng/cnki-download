@@ -11,7 +11,7 @@
 """
 __author__ = 'Cyrus_Ren'
 
-#各个条件在传输时候的固定标识符
+# 各个条件在传输时候的固定标识符
 condition_value_list = {
     'a': 'SU$%=|',
     'b': 'KY',
@@ -41,7 +41,7 @@ def get_uesr_inpt():
     '''
     condition_fields = search_condition()
     source_fields = search_source()
-    fields={**condition_fields,**source_fields}
+    fields = {**condition_fields, **source_fields}
     print('正在检索中.....')
     print('－－－－－－－－－－－－－－－－－－－－－－－－－－')
     return fields
@@ -81,7 +81,7 @@ def search_condition():
                                          '】条件类型:（ａ）并且　（ｂ）或者　（ｃ）不含 ').strip()
             condition_field_list['txt_' + str(index + 1) +
                                  '_logical'] = condition_type_list.get(
-                                     condition_type_value)
+                condition_type_value)
         condition_field_list['txt_' + str(index + 1) +
                              '_sel'] = condition_value_list.get(term)
         condition_field_list['txt_' + str(index + 1) +
@@ -91,14 +91,15 @@ def search_condition():
         condition_field_list['txt_' + str(index + 1) + '_special1'] = '='
     return condition_field_list
 
+
 def search_source():
     '''
     搜索期刊来源
     '''
     print('－－－－－－－－－－－－－－－－－－－－－－－－－－')
     is_search_source = input('是否需要规定文献来源（y/n）？')
-    if is_search_source=='n':
+    if is_search_source == 'n':
         return {}
     else:
-        source=input('输入文献来源期刊名称：')
+        source = input('输入文献来源期刊名称：')
         return {'magazine_value1': source, 'magazine_special1': '%'}

@@ -1,6 +1,6 @@
 """
 -------------------------------------------------
-   File Name：     GetPageDetail.py
+   File Name：     get_page_detail.py
    Description :   获取文献摘要等信息存储至excel
    Author :        Cyrus_Ren
    date：          2018/12/12
@@ -11,12 +11,14 @@
 """
 __author__ = 'Cyrus_Ren'
 
+import math
+import random
+import re
+
 import xlwt
 from bs4 import BeautifulSoup
-from GetConfig import config
-import re
-import math, random
-from GetConfig import config
+
+from config import *
 
 HEADER = config.crawl_headers
 
