@@ -115,3 +115,5 @@ dmypy.json
 
 # Download file
 data/
+
+.idea/
